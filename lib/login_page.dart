@@ -215,7 +215,7 @@ class _MyLoginPageState extends State<MyLoginPage> {
   Future checkAuth(BuildContext context) async {
     FirebaseUser user = await _auth.currentUser();
     if (user != null) {
-      print("Already singed-in with");
+      print("Already signed-in with");
       Navigator.pushReplacement(
           context, MaterialPageRoute(builder: (context) => Home(user)));
     }
